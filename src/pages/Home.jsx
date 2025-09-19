@@ -1,11 +1,15 @@
 import React from "react";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   // logic
+  // TODO: info페이지 이동 추가
+  const history = useNavigate() // react-router-dom v6 제공하는 페이지 이동 함수
 
   const handleStart = () => {
-    console.log("info페이지로 이동");
+    // console.log("info페이지로 이동");
+    history("/info")
   };
 
   // view

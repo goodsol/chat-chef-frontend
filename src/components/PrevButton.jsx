@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PrevButton = () => {
   // logic
+  const history = useNavigate() // react-router-dom v6 제공하는 페이지 이동 함수
+  
   const hadlePrev = () => {
-    console.log("이전 페이지로 이동");
+    // console.log("이전 페이지로 이동");
+    history(-1) // 바로 이전 페이지로 이동
   };
 
   // view
