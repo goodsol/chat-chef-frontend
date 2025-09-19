@@ -3,7 +3,7 @@ import MessageBox from "../components/MessageBox";
 import PrevButton from "../components/PrevButton";
 import { MoonLoader } from "react-spinners";
 
-const Chat = () => {
+const Chat = ({ingredientList}) => {
   // logic
   const endpoint = process.env.REACT_APP_SERVER_ADDRESS
 
@@ -60,13 +60,7 @@ const Chat = () => {
 
   useEffect(() => {
     // 페이지 진입시 딱 한번 실행
-    const newItem = {
-      id: 1,
-      label: "label_1",
-      text: "",
-      value: "닭가슴살"
-    }
-    sendInfo([newItem]);
+    sendInfo(ingredientList); // App.js(부모)로부터 Props ingredientList 받음 */}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
