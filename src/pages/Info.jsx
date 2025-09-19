@@ -11,7 +11,7 @@ const Info = ({ sendIngredientList}) => {
   const history = useNavigate() // react-router-dom v6 제공하는 페이지 이동 함수
   
   // TODO: set함수 추가하기
-  const [ingredientList, setIngredientList] = useState([{}]); // 사용자가 입력할 재료 목록
+  const [ingredientList, setIngredientList] = useState([]); // 사용자가 입력할 재료 목록
 
   const addIngredient = () => {
     // 재료 추가하기
@@ -50,6 +50,7 @@ const Info = ({ sendIngredientList}) => {
   // useEffect(() => {}, [state변수])
   // ingredientList가 변경될 때 실행
   // useEffect(() => {console.log("🚀 ~ Info ~ ingredientList:", ingredientList)}, [ingredientList])
+  useEffect(() => {}, [ingredientList])
 
   // view
   return (
